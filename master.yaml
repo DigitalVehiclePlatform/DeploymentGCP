@@ -10,8 +10,8 @@ resources:
   - name: big-query-dataset
     type: bigquery.v2.dataset
     properties:
-	  datasetReference:
-	    datasetId: digitalvehicleplatform
+       datasetReference:
+          datasetId: digitalvehicleplatform
 	  
   - name: my-container-vm
     type: container_vm.py
