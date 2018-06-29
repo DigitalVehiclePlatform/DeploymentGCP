@@ -16,6 +16,6 @@ resources:
   - name: my-container-vm
     type: container_vm.py
     properties:
-      zone: ZONE_TO_RUN
+      zone: europe-west1-c
       containerImage: container-vm-v20160217
       containerManifest: container_manifest
