@@ -15,6 +15,7 @@ limitations under the License.
 {% set NAME_PREFIX = env['deployment'] + '-' + env['name'] %}
 {% set DATASET_NAME = NAME_PREFIX %}
 
+resources:
 - name: bigstore
   type: bigquery.v2.dataset
   properties:
