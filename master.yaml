@@ -4,13 +4,11 @@
 imports:
 - path: gkecluster.jinja
 - path: pubsub.jinja
+- path: bigquery.jinja
 
 resources:
 - name: bigstore
-  type: bigquery.v2.dataset
-  properties:
-     datasetReference:
-        datasetId: digitalvehicleplatform
+  type: bigquery.jinja
      
 - name: pubsub
   type: pubsub.jinja
