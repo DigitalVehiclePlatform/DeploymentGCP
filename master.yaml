@@ -11,14 +11,13 @@ resources:
   properties:
      datasetReference:
         datasetId: digitalvehicleplatform
-
      
 - name: pubsub
   type: pubsub.jinja
   properties:
     ackDeadlineSeconds: 15 
 
-- name: cluster
+- name: gkecluster
   type: gkecluster.jinja
   properties:
     zone: europe-west1-c
