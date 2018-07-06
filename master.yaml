@@ -2,9 +2,9 @@
 ### deploy the platform
 
 imports:
-  - path: container_manifest.yaml
-    name: container_manifest
-  - path: container_vm.py
+- path: container_manifest.yaml
+  name: container_manifest
+- path: container_vm.jinja
 
 resources:
   - name: big-query-dataset
