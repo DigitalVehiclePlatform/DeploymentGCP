@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-resources:
-- name: vog-incoming
-  #type: pubsub.v1.topic
-  type: gcp-types/pubsub-v1:projects.topics
-  properties:
-    topic: incoming    
+{% set NAME_PREFIX = env['deployment'] + '-' + env['name'] %}
 
-- name: vog-storage
+resources:
+- name: {{ NAME_PREFIX}}-in-standard
   #type: pubsub.v1.topic
   type: gcp-types/pubsub-v1:projects.topics
   properties:
-    topic: storage
+    topic: in-standard    
+
+- name: {{ NAME_PREFIX}}-to-storage
+  #type: pubsub.v1.topic
+  type: gcp-types/pubsub-v1:projects.topics
+  properties:
+    topic: to-storage
