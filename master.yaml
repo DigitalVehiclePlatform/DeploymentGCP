@@ -7,7 +7,7 @@ imports:
 - path: bigquery.jinja
 
 resources:
-- name: bigstore
+- name: bigquery
   type: bigquery.jinja
      
 - name: pubsub
