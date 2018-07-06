@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-{% set topic = 'configurable-pubsub-topic-' + env['deployment'] %}
-{% set subscription = env['deployment'] + '-' + env['name'] + '-subscription' %}
-
 resources:
 - name: vog-incoming
   #type: pubsub.v1.topic
