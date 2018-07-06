@@ -19,3 +19,4 @@ resources:
   type: gkecluster.jinja
   properties:
     zone: europe-west1-c
+    initialNodeCount: 3
