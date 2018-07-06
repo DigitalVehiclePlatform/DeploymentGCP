@@ -14,8 +14,8 @@ resources:
           datasetId: digitalvehicleplatform
 
   - name: my-container-vm
-    type: container_vm.py
+    type: container_vm.jinja
     properties:
       zone: europe-west1-c
-      containerImage: cos-stable-67-10575-57-0
+      containerImage: family/cos-stable
       containerManifest: container_manifest
