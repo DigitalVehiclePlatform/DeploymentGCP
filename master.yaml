@@ -6,7 +6,7 @@ imports:
 - path: pubsub.jinja
 
 resources:
-- name: big-query-dataset
+- name: bigstore
   type: bigquery.v2.dataset
   properties:
      datasetReference:
@@ -18,7 +18,7 @@ resources:
   properties:
     ackDeadlineSeconds: 15 
 
-- name: services-cluster
+- name: cluster
   type: gkecluster.jinja
   properties:
     zone: europe-west1-c
