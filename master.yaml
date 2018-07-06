@@ -25,7 +25,7 @@ resources:
 - name: echos
   type: services/echoservice.jinja
   properties:
-    clusterType: gkecluster
+    clusterType: gkecluster-type
     image: gcr.io/google-containers/busybox
     imagecommand: ['nc', '-p', '80', '-l', '-l', '-e', 'echo', 'hello world!']
     port: 80
