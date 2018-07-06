@@ -2,9 +2,7 @@
 ### deploy the platform
 
 imports:
-- path: container_manifest.yaml
-  name: container_manifest
-- path: container_vm.jinja
+- path: gkecluster.jinja
 - path: pubsub.jinja
 
 resources:
@@ -14,14 +12,13 @@ resources:
      datasetReference:
         datasetId: digitalvehicleplatform
 
-- name: my-container-vm
-  type: container_vm.jinja
-  properties:
-    zone: europe-west1-c
-    containerImage: family/cos-stable
-    containerManifest: container_manifest
-      
+     
 - name: pubsub
   type: pubsub.jinja
   properties:
     ackDeadlineSeconds: 15 
+
+- name: services-cluster
+  type: gkecluster.jinja
+  properties:
+    zone: europe-west1-c
