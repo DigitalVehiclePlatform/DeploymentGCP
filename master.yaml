@@ -8,15 +8,20 @@ imports:
 - path: pubsub.jinja
 
 resources:
-  - name: big-query-dataset
-    type: bigquery.v2.dataset
-    properties:
-       datasetReference:
-          datasetId: digitalvehicleplatform
+- name: big-query-dataset
+  type: bigquery.v2.dataset
+  properties:
+     datasetReference:
+        datasetId: digitalvehicleplatform
 
-  - name: my-container-vm
-    type: container_vm.jinja
-    properties:
-      zone: europe-west1-c
-      containerImage: family/cos-stable
-      containerManifest: container_manifest
+- name: my-container-vm
+  type: container_vm.jinja
+  properties:
+    zone: europe-west1-c
+    containerImage: family/cos-stable
+    containerManifest: container_manifest
+      
+- name: pubsub
+  type: pubsub.jinja
+  properties:
+    ackDeadlineSeconds: 15 
