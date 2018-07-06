@@ -16,7 +16,7 @@ limitations under the License.
 {% set DATASET_NAME = NAME_PREFIX %}
 
 resources:
-- name: bigstore
+- name: {{ DATASET_NAME }}
   type: bigquery.v2.dataset
   properties:
      datasetReference:
