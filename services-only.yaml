@@ -1,0 +1,12 @@
+imports:
+- path: services/echoservice.jinja
+
+resources:
+- name: echos
+  type: services/echoservice.jinja
+  properties:
+#   reference: $(ref.gkecluster.type)
+    clusterType: vog-gkecluster-type
+    image: gcr.io/google-containers/busybox
+    imagecommand: ['nc', '-p', '80', '-l', '-l', '-e', 'echo', 'hello world!']
+    port: 80
