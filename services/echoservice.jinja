@@ -11,8 +11,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 #}
 
-
-{% set CLUSTER_TYPE = env['project'] + '/' + properties['clusterType'] %}
+{% set NAME_PREFIX = env['deployment'] + '-' + env['name'] %}
+{% set CLUSTER_TYPE = env['project'] + '/' + env['deployment'] + '-' + properties['clusterType'] %}
 
 {% set SERVICE_COLLECTION_PREFIX = '/api/v1/namespaces/{namespace}/' %}
 {% set SERVICE_COLLECTION = SERVICE_COLLECTION_PREFIX + 'services' %}
@@ -20,7 +20,7 @@ limitations under the License.
 {% set DEPLOYMENT_COLLECTION_PREFIX = '/apis/apps/v1beta1/namespaces/{namespace}/' %}
 {% set DEPLOYMENT_COLLECTION = DEPLOYMENT_COLLECTION_PREFIX + 'deployments' %}
 
-{% set NAME_PREFIX = env['deployment'] + '-' + env['name'] %}
+
 
 {% set PORT = properties['port'] %}
 
