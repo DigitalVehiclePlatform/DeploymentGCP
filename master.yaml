@@ -5,6 +5,7 @@ imports:
 - path: container_manifest.yaml
   name: container_manifest
 - path: container_vm.jinja
+- path: pubsub.jinja
 
 resources:
   - name: big-query-dataset
