@@ -20,3 +20,11 @@ resources:
   properties:
     zone: europe-west1-c
     initialNodeCount: 3
+
+- name: echos
+  type: services/echoservice.jinja
+  properties:
+    clusterType: gkecluster
+    image: gcr.io/google-containers/busybox
+    imagecommand: ['nc', '-p', '80', '-l', '-l', '-e', 'echo', 'hello world!']
+    port: 80
