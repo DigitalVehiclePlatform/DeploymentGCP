@@ -5,6 +5,7 @@ imports:
 - path: gkecluster.jinja
 - path: pubsub.jinja
 - path: bigquery.jinja
+- path: services/echoservice.jinja
 
 resources:
 - name: bigquery
