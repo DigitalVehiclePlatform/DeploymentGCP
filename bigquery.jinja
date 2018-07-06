@@ -13,10 +13,11 @@ limitations under the License.
 
 
 {% set NAME_PREFIX = env['deployment'] + '-' + env['name'] %}
+{% set NAME_PREFIX_FOR_DS = env['deployment'] + '_' + env['name'] %}
 
 resources:
 - name: {{ NAME_PREFIX }}-bigstore
   type: bigquery.v2.dataset
   properties:
      datasetReference:
-        datasetId: {{ NAME_PREFIX }}-bigstore
+        datasetId: {{ NAME_PREFIX_FOR_DS }}_bigstore
