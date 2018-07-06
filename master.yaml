@@ -17,5 +17,5 @@ resources:
     type: container_vm.py
     properties:
       zone: europe-west1-c
-      containerImage: container-vm-v20160217
+      containerImage: cos-stable-67-10575-57-0
       containerManifest: container_manifest
