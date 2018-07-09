@@ -20,7 +20,7 @@ resources:
   type: gkecluster.jinja
   properties:
     zone: europe-west1-c
-    initialNodeCount: 3
+    initialNodeCount: 4
 
 #- name: echos
 #  type: services/echoservice.jinja
